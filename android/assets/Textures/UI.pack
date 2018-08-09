@@ -1,0 +1,146 @@
+
+UI.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+AchievementsButton
+  rotate: false
+  xy: 2, 36
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+CancelButton
+  rotate: false
+  xy: 774, 775
+  size: 128, 32
+  orig: 128, 32
+  offset: 0, 0
+  index: -1
+ChallengesButton
+  rotate: false
+  xy: 262, 296
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+ConfirmRateButton
+  rotate: false
+  xy: 514, 515
+  size: 128, 32
+  orig: 128, 32
+  offset: 0, 0
+  index: -1
+Empty
+  rotate: false
+  xy: 392, 392
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+GameOver
+  rotate: false
+  xy: 2, 296
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+LeaderboardsButton
+  rotate: false
+  xy: 514, 809
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+LockIcon
+  rotate: false
+  xy: 514, 549
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+NextButton
+  rotate: false
+  xy: 644, 679
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+OkButton
+  rotate: false
+  xy: 2, 2
+  size: 128, 32
+  orig: 128, 32
+  offset: 0, 0
+  index: -1
+PauseButton
+  rotate: false
+  xy: 644, 809
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+PlayButton
+  rotate: false
+  xy: 2, 426
+  size: 510, 511
+  orig: 512, 512
+  offset: 1, 1
+  index: -1
+PlayGamesButton
+  rotate: false
+  xy: 2, 166
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+RateButton
+  rotate: false
+  xy: 132, 296
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+SelectIcon
+  rotate: false
+  xy: 644, 549
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+ShopButton
+  rotate: false
+  xy: 774, 809
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+SoundOffButton
+  rotate: false
+  xy: 514, 679
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+SoundOnButton
+  rotate: false
+  xy: 132, 36
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+VibrationOffButton
+  rotate: false
+  xy: 132, 166
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+VibrationOnButton
+  rotate: false
+  xy: 262, 166
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

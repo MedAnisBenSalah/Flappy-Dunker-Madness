@@ -1,0 +1,166 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+        maven { url "https://maven.google.com" }
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.1'
+        classpath 'com.google.gms:google-services:3.1.0'
+    }
+}
+
+allprojects {
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+
+    version = '1.0'
+    ext {
+        appName = "Flappy Dunker Madness"
+        gdxVersion = '1.9.6'
+        roboVMVersion = '2.3.3'
+        box2DLightsVersion = '1.4'
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+        maven { url "https://maven.google.com" }
+        maven { url "https://jitpack.io" }
+        google()
+
+        flatDir {
+            dirs 'libs/aar'
+        }
+    }
+}
+
+project(":desktop") {
+    apply plugin: "java"
+
+
+    dependencies {
+        compile project(":core")
+        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+    }
+}
+
+project(":generator") {
+    apply plugin: "java"
+
+    dependencies {
+        compile project(":core")
+        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+    }
+}
+
+project(":encoder") {
+    apply plugin: "java"
+
+    dependencies {
+        compile project(":core")
+        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+    }
+}
+
+project(":android") {
+    apply plugin: "android"
+
+    configurations { natives }
+
+    dependencies {
+        compile project(":core")
+
+        compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
+        compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
+        compile "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+
+        compile 'com.google.android.gms:play-services-games:11.8.0'
+        compile 'com.google.android.gms:play-services-ads:11.8.0'
+        compile 'com.google.android.gms:play-services-auth:11.8.0'
+
+        compile 'com.google.firebase:firebase-crash:11.8.0'
+
+        implementation fileTree(dir: 'libs', include: '*.jar')
+
+        implementation name: 'adcolony-sdk-3.2.1', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-alphab', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-appwall', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-appwallext', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-common', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-interstitial', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-mvdownloads', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-mvjscommon', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-mvnative', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-nativeex', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-offerwall', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-playercommon', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-reward', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-videocommon', ext: 'aar'
+        implementation name: 'mobvista-8.3.7-videofeeds', ext: 'aar'
+
+        implementation project(':BaseGameUtils')
+    }
+}
+
+project(":ios") {
+    apply plugin: "java"
+    apply plugin: "robovm"
+
+
+    dependencies {
+        compile project(":core")
+        compile "com.mobidevelop.robovm:robovm-rt:$roboVMVersion"
+        compile "com.mobidevelop.robovm:robovm-cocoatouch:$roboVMVersion"
+        compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
+        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
+        compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
+    }
+}
+
+project(":core") {
+    apply plugin: "java"
+
+
+    dependencies {
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        compile "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+    }
+}
+
+tasks.eclipse.doLast {
+    delete ".project"
+}

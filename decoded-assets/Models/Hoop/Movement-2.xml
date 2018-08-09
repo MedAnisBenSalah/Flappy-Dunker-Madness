@@ -1,0 +1,9 @@
+<!-- 
+	This is a movement settings file for the "Hoop" model, movement type is "Horizontal"
+-->
+<Movement>
+	<Type value="Linear" />
+	<Path points="2" /> 
+	<Point1 x="None" y="None" />
+	<Point2 x="None" y="Down" />
+</Movement>

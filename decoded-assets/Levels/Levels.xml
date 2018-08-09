@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	This will define all the levels parameters to the game
+	
+	Parameters
+		- count: The number of levels in this game
+		
+!-->
+
+<Levels
+	count="1"
+/>

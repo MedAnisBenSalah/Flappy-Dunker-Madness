@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	This file is used to define an object to the game
+	
+	Parameters:
+		- Render: Specifies the object's rendering values
+			-- Shape: the model's shape
+				--- Circle: The model is circle shaped (should define the radius)
+				--- Rectangle: The model is rectangle (should define the size)
+				--- Polygon: The model is a polygon shape (the model must include a "Body.obm" file to define the polygon's shape)
+				
+			-- Radius(Only used with circle shapes): The circle shape radius
+			-- Size(Only used with Rectangle or Polygon shapes): The rectangle or polygon sizes
+				--- x: width
+				--- y: height
+				
+			-- Color: The entity's color
+				--- r g b a: Indicates Red/Green/Blue/Alpha values respectively
+				
+		- Light: Specifies the object's lightening values
+			-- Distance: the light's distance(size)				
+			-- Alpha: The light's color alpha (the light's color will match the entity's)
+				
+		- Physics: Specifies the object's physics values (Unused for now)
+			-- Mass: the object's mass (in KG)				
+			-- Friction: The objects's friction (between 0 and 1)
+			-- Restitution: The objects's restitution (between 0 and 1)
+			
+		- Movement: Specifies the object's movements
+			-- Simple: Indicates the simple movements count				
+			-- Composed: Groups the object's composed movements
+				--- movement1: The first movement id (starting at 0)
+				--- movement2: The second movement id (starting at 0)
+				--- positionFix: This will reposition the second object in relation to the first one 
+!-->
+<Model>
+
+	<Body>
+		<Size x="2.4" y="2.4" />
+	</Body>
+		
+	<Physics>
+		<Mass value="70" />
+		<Friction value="0.3" />
+		<Restitution value="0.5" />
+	</Physics>
+
+	<MainFixture>
+	
+		<Position x="0" y="0" />
+		<Radius value="1.2" />
+		
+	</MainFixture>
+			
+	<Movements count="0" />
+	
+</Model>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Flappy Dunker Madness</string>
+
+    <string name="appodeal_apikey" translatable="false">c7e1a5eb6f40133e525a73a25274a3cc34dc47bfbf67b724</string>
+
+</resources>

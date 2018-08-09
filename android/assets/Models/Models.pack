@@ -1,0 +1,48 @@
+
+Models.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Brick
+  rotate: false
+  xy: 0, 2
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+Empty
+  rotate: false
+  xy: 256, 81
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+HoopFront
+  rotate: false
+  xy: 256, 115
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+HoopRear
+  rotate: false
+  xy: 0, 68
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+Player
+  rotate: false
+  xy: 256, 224
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Wing
+  rotate: false
+  xy: 0, 177
+  size: 256, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1

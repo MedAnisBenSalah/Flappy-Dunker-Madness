@@ -1,0 +1,48 @@
+
+Hoops.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Citrus
+  rotate: false
+  xy: 1034, 2
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+Classic
+  rotate: false
+  xy: 518, 2
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+Inversed
+  rotate: false
+  xy: 776, 2
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+Lime
+  rotate: false
+  xy: 1292, 2
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+Raspberry
+  rotate: false
+  xy: 2, 2
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1
+UltraViolet
+  rotate: false
+  xy: 260, 2
+  size: 256, 107
+  orig: 256, 107
+  offset: 0, 0
+  index: -1

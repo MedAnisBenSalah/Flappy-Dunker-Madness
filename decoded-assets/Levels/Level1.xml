@@ -1,0 +1,2157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	This file is used to define a level to the game, each level has several parameters to define its behaviour and how
+	it should be handled.
+	
+	Parameters:
+		- General: Defines the general aspects of a level
+			-- name: Level's name 
+			-- musicFile: The music's file name (located under Audio/)
+			-- difficulty: The difficulity's name (yeah be creative)
+			-- reward: The reward amount for completing the level 
+			-- musicName: The music's name
+			-- musicAuthor: The music author's name
+			-- backgroundColorX: The background's color that the level should start with
+			-- entitiesColorX: The entities's color that the level should start with
+			-- playerSpeed: The starting player's speed
+			
+		- Objects: Defines all the level objects
+			-- Object: New object
+				--- Model: object's model name
+				--- Position: The object's position in the game world
+					---- x: Position in seconds (music's seconds)
+					---- y: Position in world coordinates
+					
+				--- Size: The object's size
+					---- x: Width (-1 to use default width)
+					---- y: Height (-1 to use default height)
+					
+				--- Movement: Specifies the object's movement 
+					---- id: Movement id
+					---- startingPoint: Movement's starting point
+					---- speed: Movement's speed (0 to use default speed)
+					
+		- Events: Defines all the level events
+				--- position: All event's types should include the "position" attribute to specifiy it's position in seconds
+				
+			-- BackgroundTransition: Transit the background from color to another color 
+				--- r, g, b, a: The new color 
+				--- transitDuration: The transit duration
+				
+			-- EntitiesColorTransition: Transit the entities color to another color 
+				--- r, g, b, a: The new color 
+				--- transitDuration: The transit duration
+				
+			-- SpeedChange: Sets the player's speed
+				--- speed: The new speed 
+				
+			-- TakeControl: Locks the player controls and takes care of the player's futon
+				--- positionY: The vertical position in which the player remains
+				--- speed: The speed in which it'll reach the "positionY" with
+				--- shuffleDistance: How much should the futon shuffle 
+				
+			-- RestoreControl: Restores the player's controls
+				--- no parameters (except position)
+				
+			-- DisplayText: Displays a text on the screen
+				--- text: The text to display
+				--- screenPositionX: the text's x position (relative to the screen's width where 0 is right and 1 is left)
+				--- screenPositionY: the text's y position (relative to the screen's height where 0 is bottom and 1 is top)
+				--- endPosition: The position in which the text will stop showing (in music's seconds)
+				
+			-- ToggleLethalGround: Sets the lethal ground state
+				--- toggle: Lethal ground's state
+				
+			-- EnterExclusiveState: Enters the exclusive state
+				--- objects: The number of objects to attack the player
+				--- speed: Object's speed
+				
+			-- SetObjectsEntryAnimation: Sets the objects entry animation
+				--- type: Entry animation type 
+					---- Normal: No animation 
+					---- ScrollUp: Objects scroll up from the bottom of the screen, and leaves to the bottom
+					---- ScrollDown: Objects scroll down from the top of the screen, and leaves to the top
+					---- FadeIn: Objects fade in to the screen, and fades out when leaving
+					
+				--- speed: Animation's speed
+				
+			-- LevelCompleted: Sets the level completion point
+				--- no parameters (except position)
+!-->
+
+<Level>
+
+	<General
+		name="Just Starting"
+		musicFile="Level1"
+		difficulty="Requires a brain"
+		reward="40"
+		musicName="Avello - Back On"
+		musicAuthor="VanillaMUSIC"
+		message="Just follow the rhythm"
+		backgroundColorR="0.2" backgroundColorG="0.4" backgroundColorB="0.6" backgroundColorA="0.5"
+		entitiesColorR="0.8" entitiesColorG="0.6" entitiesColorB="0.4" entitiesColorA="1"
+		playerSpeed="27.5"
+		objectsEntryAnimationType="FadeIn" objectsEntryAnimationSpeed="12.5"
+		objectsEntryAnimationType="FadeIn" objectsEntryAnimationSpeed="12.5"
+	/>
+	
+	<Objects>
+			
+		<!-- First set (centered) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="7.7" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="8.5" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="9.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Second set (top) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="10.1" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="10.9" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="11.7" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Third set (bottom) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="12.5" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="13.3" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="14.1" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Fourth set (middle block) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="15.2" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="15.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Fifth set (random) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="16" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="16.8" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="17.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="18.4" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="19.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Sixth set (double down) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="20" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="20.8" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Eighth set (blocks) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="22.7" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="22.7" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="23.5" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="23.5" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 2 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="24.3" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="24.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="25.1" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="25.1" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 3 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="25.9" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="25.9" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="26.7" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="26.7" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 4 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="27.5" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="27.5" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="28.3" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="28.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Nineth set (linear) -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="29.1" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="29.1" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 2 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="30.7" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="30.7" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 3 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="32.3" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="32.3" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 4 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="33.9" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="33.9" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 5 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="35.5" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="35.5" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Block 6 -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="37.1" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="37.1" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Up/down movement -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="38.5" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="39.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="40.1" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="40.9" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="41.7" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="42.5" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="43.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="0" speed="16" />
+		</Object>
+
+		<!-- Left/right movement -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="44.1" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="44.9" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="45.7" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="46.5" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="47.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="0" speed="16" />
+		</Object>
+				
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="48.1" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="48.9" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="49.7" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="50.5" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="51.3" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="1" speed="16" />
+		</Object>
+		
+		<!-- Lasers -->
+		<Object>
+			<Model name="Laser" />
+			<Position x="53.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="54.2" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="54.8" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="55.4" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="56" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="56.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="57.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="57.8" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="58.4" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="59" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Laser" />
+			<Position x="59.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Vertical chainsaw -->
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="60.1" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="60.9" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="61.7" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="62.5" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="63.3" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="64.1" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="64.9" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="VerticalChainsaw" />
+			<Position x="65.7" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- LinearParted -->
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="70" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="71" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="72" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="73" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="74" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="75" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="76" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="77" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="78" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="79" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="80" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="LinearParted" />
+			<Position x="81" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- RectangularParted -->
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="82" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="83" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="84" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="85" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="86" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="87" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="88" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularParted" />
+			<Position x="89" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- RectangularCircularParted -->
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="90" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="91" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="92" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="93" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="94" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="95" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="96" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="RectangularCircularParted" />
+			<Position x="97" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Post-Beat drop random chainsaws -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="99" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="99.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="99.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="100.2" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="100.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="100.8" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="100.8" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="101.4" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="102" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="102.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="102.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="103.2" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="103.8" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="103.8" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="104.4" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="105" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- Inflatables -->
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="105.8" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="106.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="107.4" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="108.2" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="109" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="109.8" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="110.6" y="6.275" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="111.4" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="112.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Inflatable" />
+			<Position x="113" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<!-- ChainsawStick -->
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="114" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="114.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="1" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="115.2" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="115.8" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="1" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="116.4" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="117" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="1" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="117.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="118.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="1" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="118.8" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="ChainsawStick" />
+			<Position x="119.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="1" speed="0" />
+		</Object>
+		
+		<!-- Circles -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="120.4" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="120.4" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="121.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="121.2" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="122" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="122" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="122.8" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="122.8" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="123.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="123.6" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="124.4" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="124.4" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="125.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="125.2" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="126" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="126" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="126.8" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="3" startingPoint="0" speed="16" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="126.8" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="4" startingPoint="1" speed="16" />
+		</Object>
+		
+		<!-- Zig Zag -->
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="127.6" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="7" startingPoint="0" speed="22" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="128.7" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="8" startingPoint="1" speed="22" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="129.8" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="7" startingPoint="0" speed="22" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="130.9" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="8" startingPoint="1" speed="22" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="132" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="7" startingPoint="0" speed="22" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="133.1" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="8" startingPoint="1" speed="22" />
+		</Object>
+		
+		<Object>
+			<Model name="Chainsaw" />
+			<Position x="134.2" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="7" startingPoint="0" speed="22" />
+		</Object>	
+
+		<!-- ChainObject -->
+		<Object>
+			<Model name="Wall" />
+			<Position x="136" y="0" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>		
+		
+		<Object>
+			<Model name="Wall" />
+			<Position x="140.8" y="0" />
+			<Size x="1" y="1" />
+			<Movement id="1" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Wall" />
+			<Position x="145.6" y="0" />
+			<Size x="1" y="1" />
+			<Movement id="2" startingPoint="0" speed="0" />
+		</Object>	
+
+		<!-- CircularParted -->
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="168" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="169" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="170" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="171" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="172" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="173" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="174" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="CircularParted" />
+			<Position x="175" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<!-- Coins -->
+		<Object>
+			<Model name="Coin" />
+			<Position x="186" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+		
+		<Object>
+			<Model name="Coin" />
+			<Position x="186" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+		
+		<Object>
+			<Model name="Coin" />
+			<Position x="186" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="187" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+		
+		<Object>
+			<Model name="Coin" />
+			<Position x="187" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+		
+		<Object>
+			<Model name="Coin" />
+			<Position x="187" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="188" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Coin" />
+			<Position x="188" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+		
+		<Object>
+			<Model name="Coin" />
+			<Position x="188" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="189" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="189" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="189" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="190" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="190" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="190" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="191" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="191" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="191" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="192" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="192" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>			
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="192" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="193" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="193" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="193" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>		
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="194" y="22.5" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="194" y="15.25" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>	
+
+		<Object>
+			<Model name="Coin" />
+			<Position x="194" y="7.625" />
+			<Size x="1" y="1" />
+			<Movement id="0" startingPoint="0" speed="0" />
+		</Object>				
+		
+	</Objects>
+	
+	<Events>
+	
+		<!-- First objects entry animation change -->
+		<SetObjectsEntryAnimation 
+			position="15"
+			type="ScrollDown"
+			speed="7.5"
+		/>
+
+		<!-- First background transition (Red) -->
+		<BackgroundTransition 
+			position="22.73"
+			r="0.8627" g="0.0784" b="0.2352" a="0.7"
+			transitDuration="15"
+		/>
+		
+		<!-- First beat change speed change -->
+		<SpeedChange 
+			position="37.7"
+			speed="35"
+		/>
+		
+		<!-- Second objects entry animation change -->
+		<SetObjectsEntryAnimation 
+			position="35"
+			type="FadeIn"
+			speed="12.5"
+		/>
+		
+		<!-- First beat change background transition (Cyan) -->
+		<BackgroundTransition 
+			position="37.7"
+			r="0" g="0.545" b="0.545" a="0.6"
+			transitDuration="15"
+		/>
+		
+		<!-- Beat drop entities color transition (Cyan inversed) -->
+		<EntitiesColorTransition 
+			position="38"
+			r="1" g="0.455" b="0.455" a="1"
+			transitDuration="15"
+		/>
+		
+		<!-- 2nd beat change speed change -->
+		<SpeedChange 
+			position="52.8"
+			speed="42"
+		/>
+		
+		<!-- 2nd beat change background transition (Grey) -->
+		<BackgroundTransition 
+			position="52.8"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="15"
+		/>
+		
+		<!-- Pre-Beat drop background transition (Blue) -->
+		<BackgroundTransition 
+			position="66"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="15"
+		/>
+		
+		<!-- Pre-Beat drop speed change -->
+		<SpeedChange 
+			position="66"
+			speed="27.5"
+		/>
+		
+		<!-- Third objects entry animation change -->
+		<SetObjectsEntryAnimation 
+			position="66"
+			type="ScrollUp"
+			speed="10"
+		/>
+		
+		<!-- Beat drop background transition (Black) -->
+		<BackgroundTransition 
+			position="67.8"
+			r="0" g="0" b="0" a="1"
+			transitDuration="1"
+		/>
+		
+		<!-- Beat drop speed change -->
+		<SpeedChange 
+			position="67.8"
+			speed="55"
+		/>
+		
+		<!-- Beat drop entities color transition (Red) -->
+		<EntitiesColorTransition 
+			position="67.8"
+			r="0.8627" g="0.0784" b="0.2352" a="1"
+			transitDuration="1"
+		/>
+		
+		<!-- Toggle on lethal ground -->
+		<ToggleLethalGround 
+			position="67.8"
+			toggle="true"
+		/>
+		
+		<!-- Beat back to normal background transition (Black) -->
+		<BackgroundTransition 
+			position="97.6"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="20"
+		/>
+		
+		<!-- Beat back to normal speed change -->
+		<SpeedChange 
+			position="97.6"
+			speed="35"
+		/>
+		
+		<!-- Toggle off lethal ground -->
+		<ToggleLethalGround 
+			position="97.6"
+			toggle="false"
+		/>
+		
+		<!-- Fourth objects entry animation change -->
+		<SetObjectsEntryAnimation 
+			position="95"
+			type="ScrollDown"
+			speed="7.5"
+		/>
+		
+		<!-- Beat change background transition (Green) -->
+		<BackgroundTransition 
+			position="105"
+			r="0.0980" g="0.5058" b="0.0980" a="0.65"
+			transitDuration="20"
+		/>
+		
+		<!-- Beat change speed change -->
+		<SpeedChange 
+			position="105"
+			speed="35"
+		/>
+		
+		<!-- 2nd Beat change background transition (Sky blue) -->
+		<BackgroundTransition 
+			position="120"
+			r="0.5294" g="0.8078" b="0.7648" a="0.5"
+			transitDuration="20"
+		/>
+		
+		<!-- 2nd Beat change speed change -->
+		<SpeedChange 
+			position="120"
+			speed="42"
+		/>
+		
+		<!-- 3rd Beat change background transition (Purple) -->
+		<BackgroundTransition 
+			position="135"
+			r="0.42" g="0" b="0.42" a="0.6"
+			transitDuration="20"
+		/>
+		
+		<!-- Chain objects speed change -->
+		<SpeedChange 
+			position="140.2"
+			speed="48"
+		/>
+		
+		<!-- Chain objects entities color transition (Red) -->
+		<EntitiesColorTransition 
+			position="142"
+			r="0.58" g="1" b="0.58" a="1"
+			transitDuration="20"
+		/>
+		
+		<!-- Beat change control take over -->
+		<TakeControl 
+			position="150"
+			positionY="15.25"
+			speed="60"
+			shuffleDistance="2"
+		/>
+		
+		<!-- Beat change 2nd control take over -->
+		<TakeControl 
+			position="157.6"
+			positionY="15.25"
+			speed="60"
+			shuffleDistance="1.25"
+		/>
+		
+		<!-- Beat change 3rd control take over -->
+		<TakeControl 
+			position="161.6"
+			positionY="15.25"
+			speed="60"
+			shuffleDistance="0.75"
+		/>
+		
+		<!-- Beat change 4th control take over -->
+		<TakeControl 
+			position="163.6"
+			positionY="15.25"
+			speed="60"
+			shuffleDistance="0.5"
+		/>
+		
+		<!-- Beat change Hold text -->
+		<DisplayText 
+			position="150"
+			text="Hold"
+			screenPositionX="0.5" screenPositionY="0.75"
+			endPosition="161.8"
+		/>
+		
+		<!-- Beat change Get Ready text -->
+		<DisplayText 
+			position="162"
+			text="Get Ready !"
+			screenPositionX="0.5" screenPositionY="0.75"
+			endPosition="165.8"
+		/>
+		
+		<!-- Beat change Go text -->
+		<DisplayText 
+			position="166"
+			text="Go !"
+			screenPositionX="0.5" screenPositionY="0.75"
+			endPosition="168"
+		/>
+		
+		<!-- 2nd Beat drop background transition (Black) -->
+		<BackgroundTransition 
+			position="166"
+			r="0" g="0" b="0" a="1"
+			transitDuration="1"
+		/>
+		
+		<!-- 2nd Beat drop speed change -->
+		<SpeedChange 
+			position="166"
+			speed="55"
+		/>
+		
+		<!-- 2nd Beat drop restore control -->
+		<RestoreControl 
+			position="166"
+		/>
+		
+		<!-- 2nd Beat drop entities color transition (Red) -->
+		<EntitiesColorTransition 
+			position="166"
+			r="0.8627" g="0.0784" b="0.2352" a="1"
+			transitDuration="1"
+		/>
+		
+		<!-- 2nd beat drop Toggle on lethal ground -->
+		<ToggleLethalGround 
+			position="166"
+			toggle="true"
+		/>
+		
+		<!-- Enter exclusive state -->
+		<EnterExclusiveState 
+			position="175.2"
+			objects="25"
+			speed="150"
+		/>
+				
+		<!-- Level completed take control -->
+		<TakeControl 
+			position="195.26"
+			positionY="15.25"
+			speed="60"
+			shuffleDistance="0"
+		/>
+		
+		<!-- Level completed speed change -->
+		<SpeedChange 
+			position="195.26"
+			speed="65"
+		/>
+					
+		<!-- Level completed 2nd speed change -->
+		<SpeedChange 
+			position="202.73"
+			speed="95"
+		/>	
+		
+		<!-- Level completed 2nd background transition (Blue) -->
+		<BackgroundTransition 
+			position="202.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 2 background transition (Green) -->
+		<BackgroundTransition 
+			position="202.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 3 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="203.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 4 background transition (Grey) -->
+		<BackgroundTransition 
+			position="203.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 5 background transition (Purple) -->
+		<BackgroundTransition 
+			position="203.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd background 6 transition (Blue) -->
+		<BackgroundTransition 
+			position="203.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 7 background transition (Green) -->
+		<BackgroundTransition 
+			position="203.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 8 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="204.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 9 background transition (Grey) -->
+		<BackgroundTransition 
+			position="204.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 10 background transition (Purple) -->
+		<BackgroundTransition 
+			position="204.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd background 11 transition (Blue) -->
+		<BackgroundTransition 
+			position="204.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 12 background transition (Green) -->
+		<BackgroundTransition 
+			position="204.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 13 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="205.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 14 background transition (Grey) -->
+		<BackgroundTransition 
+			position="205.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 15 background transition (Purple) -->
+		<BackgroundTransition 
+			position="205.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd background 16 transition (Blue) -->
+		<BackgroundTransition 
+			position="205.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 17 background transition (Green) -->
+		<BackgroundTransition 
+			position="205.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 18 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="206.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 19 background transition (Grey) -->
+		<BackgroundTransition 
+			position="206.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 20 background transition (Purple) -->
+		<BackgroundTransition 
+			position="206.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd background 21 transition (Blue) -->
+		<BackgroundTransition 
+			position="206.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 22 background transition (Green) -->
+		<BackgroundTransition 
+			position="206.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 23 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="207.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 24 background transition (Grey) -->
+		<BackgroundTransition 
+			position="207.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 25 background transition (Purple) -->
+		<BackgroundTransition 
+			position="207.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd background 26 transition (Blue) -->
+		<BackgroundTransition 
+			position="207.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 27 background transition (Green) -->
+		<BackgroundTransition 
+			position="207.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 28 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="208.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 29 background transition (Grey) -->
+		<BackgroundTransition 
+			position="208.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 30 background transition (Purple) -->
+		<BackgroundTransition 
+			position="208.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd background 31 transition (Blue) -->
+		<BackgroundTransition 
+			position="208.73"
+			r="0.2" g="0.4" b="0.6" a="0.7"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 2nd 32 background transition (Green) -->
+		<BackgroundTransition 
+			position="208.93"
+			r="0.0980" g="0.5058" b="0.0980" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 31 background transition (Cyan) -->
+		<BackgroundTransition 
+			position="209.13"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 32 background transition (Grey) -->
+		<BackgroundTransition 
+			position="209.33"
+			r="0.0980" g="0.0980" b="0.0980" a="0.65"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 2nd 33 background transition (Purple) -->
+		<BackgroundTransition 
+			position="209.53"
+			r="0.42" g="0" b="0.42" a="0.7"
+			transitDuration="1"
+		/>
+		
+		<!-- Level completed 3rd background transition (Black) -->
+		<BackgroundTransition 
+			position="209.63"
+			r="0" g="0" b="0" a="1"
+			transitDuration="5"
+		/>
+		
+		<!-- Level completed 3rd speed change -->
+		<SpeedChange 
+			position="207"
+			speed="125"
+		/>
+		
+		<!-- Level completed 4th speed change -->
+		<SpeedChange 
+			position="208.66"
+			speed="200"
+		/>
+		
+		<!-- Level completed event -->
+		<LevelCompleted 
+			position="210.3"
+		/>
+		
+	</Events>
+		
+</Level>

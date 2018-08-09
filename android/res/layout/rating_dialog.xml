@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:background="@drawable/rating_dialog_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/rateText"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:text="If you enjoy Flappy Dunker, please rate it" />
+
+    <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:max="5"
+            android:stepSize="1"
+            android:minHeight="10dp"
+            android:maxHeight="100dp"
+            android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:weightSum="12">
+
+        <Button
+            android:id="@+id/rateNeverButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Never"
+            android:textColor="#555555"
+            android:background="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="3"/>
+
+        <Button
+            android:id="@+id/rateNotNowButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Not now"
+            android:textColor="#555555"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            android:layout_weight="6"/>
+
+        <Button
+            android:id="@+id/rateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:background="#FFFFFF"
+            android:textSize="20sp"
+            android:textColor="#2196f3"
+            android:gravity="right"
+            android:layout_marginRight="2dp"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

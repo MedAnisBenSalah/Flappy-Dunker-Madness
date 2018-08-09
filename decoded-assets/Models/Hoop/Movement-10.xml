@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is a movement settings file for the "Chainsaw" model, movement type is "upper triangle":
+		- Rules:
+			-- ?X? : Replaces the order number
+			
+	
+		- Type: Indicates the movement type
+			-- value: The type
+				--- Static: The object doesn't move (used for rotation movement)
+				--- Linear: The object moves between points in a linear way
+				--- Circular: The object moves between points in a circular way
+	
+		- Path: Configures the movement path
+			-- points: Number of points to alternate between
+			-- repeat: Whether or not we should repeat the movement after its ended
+		
+		- Point?X?: Indicates the point parameters (points order starts at 1)
+			-- x: The x position
+				--- None: The x axis remains its previous position
+				--- Left: Will be positioned "distance/2" meters left from its last position
+				--- Right: Will be positioned "distance/2" meters right from its last position
+				
+			-- y: The y position
+				--- None: The y axis remains at its previous position
+				--- Middle: Will be positioned at the centre of the screen
+				--- Up: Will be positioned "distance/2" meters above its center position
+				--- Down: Will be positioned "distance/2" meters below its center position
+		
+	
+		- Rotation: Configures the rotation movement
+			-- speed: The rotation speed
+-->
+<Movement>
+	<Type value="Linear" />
+	<Path points="5" distance="1" /> 
+	<Point1 x="Left" y="Middle" />
+	<Point2 x="Right" y="Up" />
+	<Point3 x="Right" y="Middle" />
+	<Point4 x="Left" y="Middle" />
+	<Point5 x="Left" y="Middle" />
+	<Rotation speed="4.5" />
+</Movement>

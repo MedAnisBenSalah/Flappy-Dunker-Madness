@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+    <!-- app_id -->
+    <string name="app_id" translatable="false">657905553485</string>
+    <!-- package_name -->
+    <string name="package_name" translatable="false">com.ormisiclapps.flappydunkermadness</string>
+    <!-- achievement Just Starting -->
+    <string name="achievement_just_starting" translatable="false">CgkIzaDo8ZITEAIQBQ</string>
+    <!-- achievement Basic Flapper -->
+    <string name="achievement_basic_flapper" translatable="false">CgkIzaDo8ZITEAIQBg</string>
+    <!-- achievement Try Hard Flapper -->
+    <string name="achievement_try_hard_flapper" translatable="false">CgkIzaDo8ZITEAIQBw</string>
+    <!-- achievement Flappy Flapper -->
+    <string name="achievement_flappy_flapper" translatable="false">CgkIzaDo8ZITEAIQCA</string>
+    <!-- achievement Professional Flapper -->
+    <string name="achievement_professional_flapper" translatable="false">CgkIzaDo8ZITEAIQCQ</string>
+    <!-- achievement Master Flapper -->
+    <string name="achievement_master_flapper" translatable="false">CgkIzaDo8ZITEAIQCg</string>
+    <!-- achievement Elite Flapper -->
+    <string name="achievement_elite_flapper" translatable="false">CgkIzaDo8ZITEAIQCw</string>
+    <!-- achievement Flappy God -->
+    <string name="achievement_flappy_god" translatable="false">CgkIzaDo8ZITEAIQDA</string>
+    <!-- achievement Basic Faller -->
+    <string name="achievement_basic_faller" translatable="false">CgkIzaDo8ZITEAIQDQ</string>
+    <!-- achievement Try Hard Faller -->
+    <string name="achievement_try_hard_faller" translatable="false">CgkIzaDo8ZITEAIQDg</string>
+    <!-- achievement Falling Faller -->
+    <string name="achievement_falling_faller" translatable="false">CgkIzaDo8ZITEAIQDw</string>
+    <!-- achievement Professional Faller -->
+    <string name="achievement_professional_faller" translatable="false">CgkIzaDo8ZITEAIQEA</string>
+    <!-- achievement Master Faller -->
+    <string name="achievement_master_faller" translatable="false">CgkIzaDo8ZITEAIQEQ</string>
+    <!-- achievement Elite Faller -->
+    <string name="achievement_elite_faller" translatable="false">CgkIzaDo8ZITEAIQEg</string>
+    <!-- achievement Falling God -->
+    <string name="achievement_falling_god" translatable="false">CgkIzaDo8ZITEAIQEw</string>
+    <!-- achievement Swished -->
+    <string name="achievement_swished" translatable="false">CgkIzaDo8ZITEAIQFA</string>
+    <!-- achievement Swishing Freak -->
+    <string name="achievement_swishing_freak" translatable="false">CgkIzaDo8ZITEAIQFQ</string>
+    <!-- achievement The Swisher -->
+    <string name="achievement_the_swisher" translatable="false">CgkIzaDo8ZITEAIQFg</string>
+    <!-- leaderboard Flappy mode -->
+    <string name="leaderboard_flappy_mode" translatable="false">CgkIzaDo8ZITEAIQAA</string>
+    <!-- leaderboard Falling mode -->
+    <string name="leaderboard_falling_mode" translatable="false">CgkIzaDo8ZITEAIQAg</string>
+</resources>

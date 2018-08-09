@@ -1,0 +1,54 @@
+
+Terrain.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+GravitySwitchLine
+  rotate: false
+  xy: 2, 2
+  size: 102, 1009
+  orig: 256, 1024
+  offset: 12, 15
+  index: -1
+StartLine
+  rotate: false
+  xy: 109, 2
+  size: 99, 1009
+  orig: 256, 1024
+  offset: 12, 15
+  index: -1
+FlyingLine
+  rotate: false
+  xy: 213, 2
+  size: 95, 1009
+  orig: 256, 1024
+  offset: 12, 15
+  index: -1
+GroundLayer
+  rotate: false
+  xy: 313, 947
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Empty
+  rotate: false
+  xy: 313, 910
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Dot
+  rotate: false
+  xy: 382, 980
+  size: 32, 31
+  orig: 32, 32
+  offset: 0, 1
+  index: -1
+HalfEmpty
+  rotate: false
+  xy: 313, 873
+  size: 15, 32
+  orig: 32, 32
+  offset: 17, 0
+  index: -1

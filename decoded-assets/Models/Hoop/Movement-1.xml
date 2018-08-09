@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	This is a movement settings file for the "Hoop" model, movement type is "Vertical"
+-->
+<Movement>
+	<Type value="Linear" />
+	<Path points="2" /> 
+	<Point1 x="None" y="None" />
+	<Point2 x="Right" y="None" />
+</Movement>

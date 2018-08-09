@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "657905553485",
+    "firebase_url": "https://flappy-dunker-55358509.firebaseio.com",
+    "project_id": "flappy-dunker-55358509",
+    "storage_bucket": "flappy-dunker-55358509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657905553485:android:74eb09a4f3a4bd3c",
+        "android_client_info": {
+          "package_name": "com.ormisiclapps.flappydunker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657905553485-ng1dinceusetmsvbsp6oommqth7qmeji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcYoHTYNOFdgXKMH2ezRTWm4quduW3qVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657905553485-ng1dinceusetmsvbsp6oommqth7qmeji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657905553485:android:c953ba00a2b34151",
+        "android_client_info": {
+          "package_name": "com.ormisiclapps.flappydunkermadness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657905553485-t9rvb5a2rq6rk3epctdmau05b6n6v7la.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ormisiclapps.flappydunkermadness",
+            "certificate_hash": "0224f7e25c83547a0fad3c067d1b4029d0948fb4"
+          }
+        },
+        {
+          "client_id": "657905553485-ng1dinceusetmsvbsp6oommqth7qmeji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcYoHTYNOFdgXKMH2ezRTWm4quduW3qVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657905553485-ng1dinceusetmsvbsp6oommqth7qmeji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

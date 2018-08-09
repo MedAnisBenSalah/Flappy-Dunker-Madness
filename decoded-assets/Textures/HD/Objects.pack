@@ -1,0 +1,26 @@
+
+Objects.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: x
+LighteningAnimation
+  rotate: false
+  xy: 1, 131
+  size: 512, 256
+  orig: 512, 256
+  offset: 0, 0
+  index: -1
+WallLayer
+  rotate: false
+  xy: 515, 131
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FlameAnimation
+  rotate: false
+  xy: 1, 1
+  size: 256, 128
+  orig: 256, 128
+  offset: 0, 0
+  index: -1

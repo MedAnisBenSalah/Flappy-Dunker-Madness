@@ -1,0 +1,187 @@
+
+UI.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: x
+AchievementsButton
+  rotate: false
+  xy: 0, 1500
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+HomeButton
+  rotate: false
+  xy: 0, 986
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+PlayButton
+  rotate: false
+  xy: 513, 1500
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+RateButton
+  rotate: false
+  xy: 0, 472
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+RestartButton
+  rotate: false
+  xy: 513, 986
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+ShopButton
+  rotate: false
+  xy: 1026, 1500
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+StatisticsButton
+  rotate: false
+  xy: 513, 472
+  size: 508, 509
+  orig: 512, 512
+  offset: 2, 2
+  index: -1
+CloseButton
+  rotate: false
+  xy: 0, 0
+  size: 465, 467
+  orig: 512, 512
+  offset: 31, 14
+  index: -1
+MusicOffButton
+  rotate: false
+  xy: 1026, 1028
+  size: 465, 467
+  orig: 512, 512
+  offset: 31, 14
+  index: -1
+MusicOnButton
+  rotate: false
+  xy: 1539, 1542
+  size: 465, 467
+  orig: 512, 512
+  offset: 31, 14
+  index: -1
+QualityIcon
+  rotate: false
+  xy: 470, 0
+  size: 465, 467
+  orig: 512, 512
+  offset: 31, 14
+  index: -1
+SoundOffButton
+  rotate: false
+  xy: 1026, 556
+  size: 465, 467
+  orig: 512, 512
+  offset: 31, 14
+  index: -1
+SoundOnButton
+  rotate: false
+  xy: 940, 0
+  size: 465, 467
+  orig: 512, 512
+  offset: 31, 14
+  index: -1
+SettingsButton
+  rotate: false
+  xy: 1496, 1239
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CheckBox
+  rotate: false
+  xy: 1496, 1106
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Chevron
+  rotate: false
+  xy: 1496, 973
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+EatableIcon
+  rotate: false
+  xy: 1496, 840
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+LockIcon
+  rotate: false
+  xy: 1496, 707
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+NextButton
+  rotate: false
+  xy: 1496, 574
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+PauseButton
+  rotate: false
+  xy: 1629, 1106
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+SelectedCheckBox
+  rotate: false
+  xy: 1629, 973
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Selector
+  rotate: false
+  xy: 1629, 840
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Slider
+  rotate: false
+  xy: 1629, 707
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+WindowContour
+  rotate: false
+  xy: 1629, 574
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Empty
+  rotate: false
+  xy: 2009, 1977
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+HalfEmpty
+  rotate: false
+  xy: 1026, 519
+  size: 15, 32
+  orig: 32, 32
+  offset: 17, 0
+  index: -1

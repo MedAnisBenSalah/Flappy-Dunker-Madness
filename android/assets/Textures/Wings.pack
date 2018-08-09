@@ -1,0 +1,97 @@
+
+Wings.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bisi
+  rotate: false
+  xy: 767, 307
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Chouchou
+  rotate: false
+  xy: 512, 307
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Citrus
+  rotate: false
+  xy: 2, 2
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Classic
+  rotate: false
+  xy: 1022, 612
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Lime
+  rotate: false
+  xy: 257, 2
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Mesh
+  rotate: false
+  xy: 2, 612
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+MrGreeN
+  rotate: false
+  xy: 512, 612
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Mrabet
+  rotate: false
+  xy: 2, 307
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Pezkz
+  rotate: false
+  xy: 767, 2
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Raspberry
+  rotate: false
+  xy: 767, 612
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Reddish
+  rotate: false
+  xy: 257, 612
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+UltraViolet
+  rotate: false
+  xy: 512, 2
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
+Zheni
+  rotate: false
+  xy: 257, 307
+  size: 253, 303
+  orig: 256, 303
+  offset: 0, 0
+  index: -1
